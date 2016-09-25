@@ -4,55 +4,7 @@
 	<meta charset="utf-8">
 	<title>Payment Form</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/webflow.css">
-	<link rel="stylesheet" type="text/css" href="css/simplify-test.webflow.css">
-	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-	<script>
-		WebFont.load({
-			google: {
-				families: ["Inconsolata:400,400italic,700,700italic"]
-			}
-		});
-	</script>
-	<script type="text/javascript" src="js/modernizr.js"></script>
-	<link rel="apple-touch-icon" href="//daks2k3a4ib2z.cloudfront.net/img/webclip.png">
-	<style>
-		body {
-			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			text-rendering: optimizeLegibility;
-		}
-
-		h1 {
-			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		}
-
-		.footer-section {
-			margin-top: 10px;
-		}
-
-		.error {
-			color: red;
-		}
-
-		.success {
-			color: green;
-		}
-
-		.message {
-			margin-top: 50px;
-		}
-
-		.w-button {
-			background-color: #f60;
-			border-radius: 3px;
-		}
-
-		.busy-container {
-			display: none;
-		}
-	</style>
+	
 	<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
 <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
 <link rel="shortcut icon" href="../favicon.png">
