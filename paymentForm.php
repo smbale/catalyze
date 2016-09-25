@@ -295,7 +295,6 @@
 <div class="w-section footer-section">
 	<div class="logo-container"><img class="logo" src="images/simplifyLogo@2x.png" width="102">
 	</div>
-	      
                     
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
