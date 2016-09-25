@@ -18,6 +18,66 @@
 	</script>
 	<script type="text/javascript" src="js/modernizr.js"></script>
 	<link rel="apple-touch-icon" href="//daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+	<style>
+		body {
+			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-rendering: optimizeLegibility;
+		}
+
+		h1 {
+			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+
+		.footer-section {
+			margin-top: 10px;
+		}
+
+		.error {
+			color: red;
+		}
+
+		.success {
+			color: green;
+		}
+
+		.message {
+			margin-top: 50px;
+		}
+
+		.w-button {
+			background-color: #f60;
+			border-radius: 3px;
+		}
+
+		.busy-container {
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
+<link rel="shortcut icon" href="../favicon.png">
+	</head>
+<body>
+
+    <div class="dark half center-block light">
+        <div class="iphone-container center-block">
+            <div class="phone-shape small">
+                <span class="button-one buttons"></span>
+                <span class="button-two buttons"></span>
+                <span class="button-three buttons"></span>
+                <span class="button-four button last"></span>
+                <div class="top-details">
+                    <span class="camera"></span>
+                    <span class="circle"></span>
+                    <span class="speaker"></span>
+                </div>
+                <div class="phone-screen">
+                    <div class="navbar-default">
+                        <div class="navbar-title">CATALYZE</div>
+                     </div>
+                                           
+
+<div class="w-container message">
 	<?php
 	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
 	?>
@@ -100,31 +160,7 @@
 			}
 		}
 	</script>
-<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
-<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
-<link rel="shortcut icon" href="../favicon.png">
-	</head>
-<body>
 
-    <div class="dark half center-block light">
-        <div class="iphone-container center-block">
-            <div class="phone-shape small">
-                <span class="button-one buttons"></span>
-                <span class="button-two buttons"></span>
-                <span class="button-three buttons"></span>
-                <span class="button-four button last"></span>
-                <div class="top-details">
-                    <span class="camera"></span>
-                    <span class="circle"></span>
-                    <span class="speaker"></span>
-                </div>
-                <div class="phone-screen">
-                    <div class="navbar-default">
-                        <div class="navbar-title">CATALYZE</div>
-                     </div>
-                                           
-
-<div class="w-container message">
 	<div>
 		<h1 class="main-message">Payments on Simplify Commerce</h1>
 	</div>
