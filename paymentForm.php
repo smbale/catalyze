@@ -135,9 +135,10 @@
 			}
 		}
 	</script>
-</head><link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
 <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
 <link rel="shortcut icon" href="../favicon.png">
+	</head>
 <body>
 
     <div class="dark half center-block light">
