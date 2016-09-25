@@ -3,22 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Payment Form</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/webflow.css">
-	<link rel="stylesheet" type="text/css" href="css/simplify-test.webflow.css">
-	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script>
-		WebFont.load({
-			google: {
-				families: ["Inconsolata:400,400italic,700,700italic"]
-			}
-		});
-	</script>
-	<script type="text/javascript" src="js/modernizr.js"></script>
-	<link rel="apple-touch-icon" href="//daks2k3a4ib2z.cloudfront.net/img/webclip.png">
-	<style>
+	
 	<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
 <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
 <style>
@@ -126,9 +111,8 @@
 		}
 	</script>
 </head>
-<body>
-	
-    <div class="dark half center-block light">
+<body>                                       
+<div class="dark half center-block light">
         <div class="iphone-container center-block">
             <div class="phone-shape small">
                 <span class="button-one buttons"></span>
@@ -144,8 +128,13 @@
                     <div class="navbar-default">
                         <div class="navbar-title">CATALYZE</div>
                      </div>
-                                           
-
+                        <div class="jumbotron">
+                        <div class="overlay">
+                            <div class="jumbotron-title">INVEST IN LOCAL BUSINESSES AND</div>
+                            <div class="jumbotron-title2">GROW AS A COMMUNITY</div>
+                        </div>
+                    </div>
+                    
 <div class="w-container message">
 	<?php
 	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
@@ -295,9 +284,9 @@
 <div class="w-section footer-section">
 	<div class="logo-container"><img class="logo" src="images/simplifyLogo@2x.png" width="102">
 	</div>
-                    
+	
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
-	
+	</div>
 </body>
 </html>
