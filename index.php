@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="description" content="A beautiful HTML & CSS built iPhone 6 mock for your website." />
 <title>Dashboard - Catlyze</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="custom.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
 <link rel="shortcut icon" href="../favicon.png">
 
 </head>
