@@ -18,41 +18,6 @@
 	</script>
 	<script type="text/javascript" src="js/modernizr.js"></script>
 	<link rel="apple-touch-icon" href="//daks2k3a4ib2z.cloudfront.net/img/webclip.png">
-	<style>
-		body {
-			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			text-rendering: optimizeLegibility;
-		}
-
-		h1 {
-			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		}
-
-		.footer-section {
-			margin-top: 10px;
-		}
-
-		.error {
-			color: red;
-		}
-
-		.success {
-			color: green;
-		}
-
-		.message {
-			margin-top: 50px;
-		}
-
-		.w-button {
-			background-color: #f60;
-			border-radius: 3px;
-		}
-
-		.busy-container {
-			display: none;
-		}
-	</style>
 	<?php
 	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
 	?>
@@ -224,10 +189,7 @@
 	<div class="logo-container"><img class="logo" src="images/simplifyLogo@2x.png" width="102">
 	</div>
 	      </div>
-                </div>
-                <div class="circle-button"></div>
-            
-	   <div>     
+                    
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
 	</div>
