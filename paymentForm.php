@@ -3,6 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Payment Form</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/webflow.css">
+	<link rel="stylesheet" type="text/css" href="css/simplify-test.webflow.css">
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
