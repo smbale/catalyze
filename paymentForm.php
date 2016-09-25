@@ -135,8 +135,34 @@
 			}
 		}
 	</script>
-</head>
+</head><link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
+<link rel="shortcut icon" href="../favicon.png">
 <body>
+
+    <div class="dark half center-block light">
+        <div class="iphone-container center-block">
+            <div class="phone-shape small">
+                <span class="button-one buttons"></span>
+                <span class="button-two buttons"></span>
+                <span class="button-three buttons"></span>
+                <span class="button-four button last"></span>
+                <div class="top-details">
+                    <span class="camera"></span>
+                    <span class="circle"></span>
+                    <span class="speaker"></span>
+                </div>
+                <div class="phone-screen">
+                    <div class="navbar-default">
+                        <div class="navbar-title">CATALYZE</div>
+                     </div>
+                        <div class="jumbotron">
+                        <div class="overlay">
+                            <div class="jumbotron-title">INVEST IN LOCAL BUSINESSES AND</div>
+                            <div class="jumbotron-title2">GROW AS A COMMUNITY</div>
+                        </div>
+                    </div>
+
 <div class="w-container message">
 	<div>
 		<h1 class="main-message">Payments on Simplify Commerce</h1>
@@ -197,10 +223,19 @@
 			
 		</div>
 	</form>
-</div>
+
 <div class="w-section footer-section">
 	<div class="logo-container"><img class="logo" src="images/simplifyLogo@2x.png" width="102">
 	</div>
-</div>
+	
+	  
+                </div>
+                <div class="circle-button"></div>
+            </div>
+       
+
+        
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
