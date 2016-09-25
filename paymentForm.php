@@ -9,13 +9,125 @@
 	<link rel="stylesheet" type="text/css" href="css/simplify-test.webflow.css">
 	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<script>
+		WebFont.load({
+			google: {
+				families: ["Inconsolata:400,400italic,700,700italic"]
+			}
+		});
+	</script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<link rel="apple-touch-icon" href="//daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+	<style>
 	<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/style.css">
 <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/catalyse/Catalyst-Mobile/custom.css">
-<link rel="shortcut icon" href="../favicon.png">
-	</head>
+<style>
+		body {
+			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-rendering: optimizeLegibility;
+		}
+		h1 {
+			font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+		.footer-section {
+			margin-top: 10px;
+		}
+		.error {
+			color: red;
+		}
+		.success {
+			color: green;
+		}
+		.message {
+			margin-top: 50px;
+		}
+		.w-button {
+			background-color: #f60;
+			border-radius: 3px;
+		}
+		.busy-container {
+			display: none;
+		}
+	</style>
+	<?php
+	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
+	?>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//www.simplify.com/commerce/v1/simplify.js"></script>
+	<script type="text/javascript">
+		var $error, $success, $paymentBtn, $busyContainer;
+		$(document).ready(function () {
+			var $selYear = $('#cc-exp-year');
+			$error = $(".error");
+			$success = $(".success");
+			$paymentBtn = $("#process-payment-btn");
+			$busyContainer = $('.busy-container');
+			var currentYear = new Date().getFullYear();
+			for (var year = currentYear; year < currentYear + 10; year++) {
+				$selYear.append("<option " + ((year === (currentYear + 1)) ? " selected " : "") + " value='" + year.toString().substr(2) + "'>" + year + "</option>");
+			}
+			$paymentBtn.click(function () {
+				$busyContainer.fadeIn();
+				$error.fadeOut().html("");
+				$success.fadeOut().html("");
+				// Disable the submit button
+				$paymentBtn.attr("disabled", "disabled");
+				// Generate a card token & handle the response
+				SimplifyCommerce.generateToken({
+					key: "<?echo $publicKey?>",
+					card: {
+						number: $("#cc-number").val(),
+						cvc: $("#cc-cvc").val(),
+						expMonth: $("#cc-exp-month").val(),
+						expYear: $("#cc-exp-year").val()
+					}
+				}, simplifyResponseHandler);
+			});
+		});
+		function simplifyResponseHandler(data) {
+			$busyContainer.fadeOut();
+			$paymentBtn.removeAttr("disabled");
+			if (data.error) {
+				console.error("Error creating card token", data);
+				if (data.error.code == "validation") {
+					var fieldErrors = data.error.fieldErrors,
+						fieldErrorsLength = fieldErrors.length,
+						errorMessage = "";
+					for (var i = 0; i < fieldErrorsLength; i++) {
+						errorMessage += " Field: '" + fieldErrors[i].field +
+							"' is invalid - " + fieldErrors[i].message + "<br/>";
+					}
+					$error.html(errorMessage).fadeIn();
+				}
+			} else {
+				var token = data["id"];
+				var amount = $('#amount').val();
+				var request = $.ajax({
+					url: "/charge.php",
+					type: "POST",
+					data: { simplifyToken: token, amount: amount}
+				});
+				request.done(function (response) {
+					console.log("Response = ", response);
+					if (response.id) {
+						$success.html("Payment successfully processed & payment id = " + response.id + " !").fadeIn();
+					}
+					else if (response.status) {
+						$error.html("Payment failed with status = " + response.status + " !").fadeIn();
+					}
+					else {
+						$error.html("Payment failed with response... <br/> " + JSON.stringify(response)).fadeIn();
+					}
+				});
+				request.fail(function (jqXHR, status) {
+					console.error('Payment processing failed = ', jqXHR, status);
+				});
+			}
+		}
+	</script>
+</head>
 <body>
-
+	
     <div class="dark half center-block light">
         <div class="iphone-container center-block">
             <div class="phone-shape small">
@@ -175,16 +287,18 @@
 			<div class="success"></div>
 			<div class="error"></div>
 			
+																		   href="https://www.simplify.com/commerce/docs/tutorial/index#testing">page.</a>
+			</div>
 		</div>
 	</form>
 
 <div class="w-section footer-section">
 	<div class="logo-container"><img class="logo" src="images/simplifyLogo@2x.png" width="102">
 	</div>
-	      </div>
+	      
                     
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
-	</div>
+	
 </body>
 </html>
